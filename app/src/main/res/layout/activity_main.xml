@@ -4,33 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Main.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/BlokListDays"
         android:layout_width="120dp"
         android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:background="@color/black"
-        >
+        app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/btnMonday"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:background="@drawable/item"
-            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/btnTuesday"
-            >
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Mon"
-                android:textSize="40dp"
                 android:gravity="center"
+                android:text="Mon"
                 android:textColor="@color/white"
-                />
+                android:textSize="40dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -39,17 +36,16 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:background="@drawable/item"
-            app:layout_constraintTop_toBottomOf="@id/btnMonday"
             app:layout_constraintBottom_toTopOf="@id/btnTursday"
-            >
+            app:layout_constraintTop_toBottomOf="@id/btnMonday">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Tue"
-                android:textSize="40dp"
                 android:gravity="center"
+                android:text="Tue"
                 android:textColor="@color/white"
-                />
+                android:textSize="40dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -58,17 +54,16 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:background="@drawable/item"
-            app:layout_constraintTop_toBottomOf="@id/btnTuesday"
             app:layout_constraintBottom_toTopOf="@id/btnToursday"
-            >
+            app:layout_constraintTop_toBottomOf="@id/btnTuesday">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Wed"
-                android:textSize="40dp"
                 android:gravity="center"
+                android:text="Wed"
                 android:textColor="@color/white"
-                />
+                android:textSize="40dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -76,17 +71,16 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:background="@drawable/item"
-            app:layout_constraintTop_toBottomOf="@id/btnTursday"
             app:layout_constraintBottom_toTopOf="@id/btnFriday"
-            >
+            app:layout_constraintTop_toBottomOf="@id/btnTursday">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Thu"
-                android:textSize="40dp"
                 android:gravity="center"
+                android:text="Thu"
                 android:textColor="@color/white"
-                />
+                android:textSize="40dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -94,17 +88,16 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:background="@drawable/item"
-            app:layout_constraintTop_toBottomOf="@id/btnToursday"
             app:layout_constraintBottom_toTopOf="@id/btnSoturday"
-            >
+            app:layout_constraintTop_toBottomOf="@id/btnToursday">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Fri"
-                android:textSize="40dp"
                 android:gravity="center"
+                android:text="Fri"
                 android:textColor="@color/white"
-                />
+                android:textSize="40dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -112,17 +105,16 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:background="@drawable/item"
-            app:layout_constraintTop_toBottomOf="@id/btnFriday"
             app:layout_constraintBottom_toTopOf="@id/btnSunday"
-            >
+            app:layout_constraintTop_toBottomOf="@id/btnFriday">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Sat"
-                android:textSize="40dp"
                 android:gravity="center"
+                android:text="Sat"
                 android:textColor="@color/white"
-                />
+                android:textSize="40dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -130,17 +122,16 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:background="@drawable/item"
-            app:layout_constraintTop_toBottomOf="@id/btnSoturday"
             app:layout_constraintBottom_toBottomOf="parent"
-            >
+            app:layout_constraintTop_toBottomOf="@id/btnSoturday">
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Sun"
-                android:textSize="40dp"
                 android:gravity="center"
+                android:text="Sun"
                 android:textColor="@color/white"
-                />
+                android:textSize="40dp" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -148,27 +139,26 @@
 
     <TextView
         android:id="@+id/IdTitle"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="20dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/carter_one"
         android:gravity="center"
         android:text="@string/Title"
-        android:textSize="70dp"
         android:textColor="@color/black"
+        android:textSize="70dp"
         app:layout_constraintEnd_toStartOf="@+id/BlokListDays"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/BlokListDays"
-        app:layout_constraintTop_toBottomOf="@+id/IdTitle"
+        android:paddingStart="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        >
-
+        app:layout_constraintEnd_toStartOf="@+id/BlokListDays"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IdTitle">
 
 
     </androidx.recyclerview.widget.RecyclerView>
