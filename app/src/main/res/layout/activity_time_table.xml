@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Timetable.TimeTable">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="10dp"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/BlockMondayTimetable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btns_back">
+
+                <TextView
+                    android:id="@+id/TitleMondayTimeTable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monday"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:fontFamily="@font/carter_one"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <ScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintStart_toEndOf="@+id/TitleMondayTimeTable"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp"
+                    tools:ignore="MissingConstraints">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:paddingVertical="5dp"
+                        android:paddingHorizontal="5dp"
+                        android:id="@+id/RecyclerMondayTimeTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                </ScrollView>
+
+                <TextView
+                    android:id="@+id/addNewWorkMonday"
+                    android:onClick="methodOpenDialogMonday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@+id/TitleMondayTimeTable"
+                    app:layout_constraintTop_toBottomOf="@+id/TitleMondayTimeTable"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="Add"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/carter_one"
+                    android:background="@drawable/btns_back"
+                    android:paddingHorizontal="10dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

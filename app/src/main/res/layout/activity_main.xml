@@ -146,19 +146,39 @@
         android:gravity="center"
         android:text="@string/Title"
         android:textColor="@color/black"
-        android:textSize="70dp"
+        android:textSize="50dp"
         app:layout_constraintEnd_toStartOf="@+id/BlokListDays"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/IdTimetable"
+        android:onClick="MethodRefTimetable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/carter_one"
+        android:gravity="center"
+        android:text="Timetable"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toStartOf="@+id/BlokListDays"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/IdTitle"
+        android:paddingHorizontal="5dp"
+        android:background="@drawable/btns_back"/>
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:paddingStart="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/BlokListDays"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/IdTitle">
+        app:layout_constraintTop_toBottomOf="@+id/IdTimetable">
 
 
     </androidx.recyclerview.widget.RecyclerView>
