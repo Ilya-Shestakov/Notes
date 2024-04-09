@@ -8,7 +8,7 @@
     android:layout_marginVertical="1sp">
 
     <TextView
-        android:id="@+id/NameInItemMondayTimeTable"
+        android:id="@+id/NameInItemTimeTable"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:text=""

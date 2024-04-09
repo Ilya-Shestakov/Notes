@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@null"
+    android:backgroundTint="@null"
+    android:layout_gravity="center">
+
+    <EditText
+        android:id="@+id/editTextInDialogNewWorkFriday"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/white"
+        android:fontFamily="@font/carter_one"
+        android:hint="subject..."
+        android:paddingStart="5dp"
+        android:paddingBottom="5dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/saveInDialogWorkFriday"
+        android:onClick="methodSaveWorkFriday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextInDialogNewWorkFriday"
+        android:layout_marginTop="10dp"
+        android:text="Save"
+        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/carter_one"
+        android:background="@drawable/btns_back"
+        android:paddingHorizontal="10dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

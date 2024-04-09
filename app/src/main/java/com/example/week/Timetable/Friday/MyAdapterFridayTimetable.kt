@@ -1,25 +1,26 @@
-package com.example.week
+package com.example.week.Timetable.Friday
 
-import android.provider.ContactsContract.Contacts.Data
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.week.R
 
-class MyAdapterMondaytimetable(var userList: ArrayList<DatalisMondayTimetable>): RecyclerView.Adapter<MyAdapterMondaytimetable.MyViewHolder>() {
+class MyAdapterFridayTimetable(var userList: ArrayList<DatalistFridayTimetable>): RecyclerView.Adapter<MyAdapterFridayTimetable.MyViewHolder>() {
 
     private lateinit var mListener: onItemClickListener
     interface onItemClickListener{
         fun onItemClick(position: Int)
     }
+
     fun OnItemClickListener(listener: onItemClickListener){
         mListener = listener
     }
 
     class MyViewHolder(itemView: View, listener: onItemClickListener): RecyclerView.ViewHolder(itemView)
     {
-        val tname: TextView = itemView.findViewById(R.id.NameInItemMondayTimeTable)
+        val tname: TextView = itemView.findViewById(R.id.NameInItemTimeTable)
 
         init{
             itemView.setOnClickListener {

@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Timetable.TimeTable">
 
     <ScrollView
         android:layout_width="match_parent"
+        android:orientation="horizontal"
         android:layout_height="match_parent">
 
         <LinearLayout
@@ -25,9 +27,10 @@
 
                 <TextView
                     android:id="@+id/TitleMondayTimeTable"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
+                    android:gravity="center"
                     android:layout_height="wrap_content"
-                    android:text="Monday"
+                    android:text="Mon"
                     android:textColor="@color/black"
                     android:textSize="30dp"
                     android:fontFamily="@font/carter_one"
@@ -72,6 +75,361 @@
                     />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/BlockTuesdayTimetable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btns_back"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/TitleTuesdayTimeTable"
+                    android:layout_width="100dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Tue"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:fontFamily="@font/carter_one"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <ScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintStart_toEndOf="@+id/TitleTuesdayTimeTable"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp"
+                    tools:ignore="MissingConstraints">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:paddingVertical="5dp"
+                        android:paddingHorizontal="5dp"
+                        android:id="@+id/RecyclerTuesdayTimeTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                </ScrollView>
+
+                <TextView
+                    android:id="@+id/addNewWorkTuesday"
+                    android:onClick="methodOpenDialogTuesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@+id/TitleTuesdayTimeTable"
+                    app:layout_constraintTop_toBottomOf="@+id/TitleTuesdayTimeTable"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="Add"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/carter_one"
+                    android:background="@drawable/btns_back"
+                    android:paddingHorizontal="10dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/BlockWednesdayTimetable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btns_back"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/TitleWednesdayTimeTable"
+                    android:layout_width="100dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Wed"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:fontFamily="@font/carter_one"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <ScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintStart_toEndOf="@+id/TitleWednesdayTimeTable"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp"
+                    tools:ignore="MissingConstraints">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:paddingVertical="5dp"
+                        android:paddingHorizontal="5dp"
+                        android:id="@+id/RecyclerWednesdayTimeTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                </ScrollView>
+
+                <TextView
+                    android:id="@+id/addNewWorkWednesday"
+                    android:onClick="methodOpenDialogWednesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@+id/TitleWednesdayTimeTable"
+                    app:layout_constraintTop_toBottomOf="@+id/TitleWednesdayTimeTable"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="Add"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/carter_one"
+                    android:background="@drawable/btns_back"
+                    android:paddingHorizontal="10dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/BlockThursdayTimetable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btns_back"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/TitleThursdayTimeTable"
+                    android:layout_width="100dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Thu"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:fontFamily="@font/carter_one"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <ScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintStart_toEndOf="@+id/TitleThursdayTimeTable"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp"
+                    tools:ignore="MissingConstraints">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:paddingVertical="5dp"
+                        android:paddingHorizontal="5dp"
+                        android:id="@+id/RecyclerThursdayTimeTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                </ScrollView>
+
+                <TextView
+                    android:id="@+id/addNewWorkThursday"
+                    android:onClick="methodOpenDialogThursday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@+id/TitleThursdayTimeTable"
+                    app:layout_constraintTop_toBottomOf="@+id/TitleThursdayTimeTable"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="Add"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/carter_one"
+                    android:background="@drawable/btns_back"
+                    android:paddingHorizontal="10dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/BlockFridayTimetable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btns_back"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/TitleFridayTimeTable"
+                    android:layout_width="100dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Fri"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:fontFamily="@font/carter_one"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <ScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintStart_toEndOf="@+id/TitleFridayTimeTable"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp"
+                    tools:ignore="MissingConstraints">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:paddingVertical="5dp"
+                        android:paddingHorizontal="5dp"
+                        android:id="@+id/RecyclerFridayTimeTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                </ScrollView>
+
+                <TextView
+                    android:id="@+id/addNewWorkFriday"
+                    android:onClick="methodOpenDialogFriday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@+id/TitleFridayTimeTable"
+                    app:layout_constraintTop_toBottomOf="@+id/TitleFridayTimeTable"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="Add"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/carter_one"
+                    android:background="@drawable/btns_back"
+                    android:paddingHorizontal="10dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/BlockSaturdayTimetable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btns_back"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/TitleSaturdayTimeTable"
+                    android:layout_width="100dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Sat"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:fontFamily="@font/carter_one"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <ScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintStart_toEndOf="@+id/TitleSaturdayTimeTable"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp"
+                    tools:ignore="MissingConstraints">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:paddingVertical="5dp"
+                        android:paddingHorizontal="5dp"
+                        android:id="@+id/RecyclerSaturdayTimeTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                </ScrollView>
+
+                <TextView
+                    android:id="@+id/addNewWorkSaturday"
+                    android:onClick="methodOpenDialogSaturday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@+id/TitleSaturdayTimeTable"
+                    app:layout_constraintTop_toBottomOf="@+id/TitleSaturdayTimeTable"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="Add"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/carter_one"
+                    android:background="@drawable/btns_back"
+                    android:paddingHorizontal="10dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/BlockSundayTimetable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btns_back"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/TitleSundayTimeTable"
+                    android:layout_width="100dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:text="Sun"
+                    android:textColor="@color/black"
+                    android:textSize="30dp"
+                    android:fontFamily="@font/carter_one"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="15dp"
+                    />
+
+                <ScrollView
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    app:layout_constraintStart_toEndOf="@+id/TitleSundayTimeTable"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginStart="20dp"
+                    tools:ignore="MissingConstraints">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:paddingVertical="5dp"
+                        android:paddingHorizontal="5dp"
+                        android:id="@+id/RecyclerSundayTimeTable"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                </ScrollView>
+
+                <TextView
+                    android:id="@+id/addNewWorkSunday"
+                    android:onClick="methodOpenDialogSunday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="@+id/TitleSundayTimeTable"
+                    app:layout_constraintTop_toBottomOf="@+id/TitleSundayTimeTable"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="Add"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/carter_one"
+                    android:background="@drawable/btns_back"
+                    android:paddingHorizontal="10dp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         </LinearLayout>
 
