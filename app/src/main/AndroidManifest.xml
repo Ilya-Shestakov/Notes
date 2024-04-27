@@ -34,7 +34,7 @@
             android:name=".Days.Tuersday"
             android:exported="false" />
         <activity
-            android:name=".Days.Monday"
+            android:name=".Days.Monday.Monday"
             android:exported="false" />
         <activity
             android:name=".Main.MainActivity"

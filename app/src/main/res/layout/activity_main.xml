@@ -20,7 +20,9 @@
             android:layout_height="0dp"
             android:background="@drawable/item"
             app:layout_constraintBottom_toTopOf="@+id/btnTuesday"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="LetsGoToMon"
+            >
 
             <TextView
                 android:layout_width="match_parent"

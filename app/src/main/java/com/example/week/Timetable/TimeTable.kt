@@ -12,6 +12,7 @@ import android.view.Window
 import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.week.Days.Monday.DBHelperMon
 import com.example.week.Timetable.Sunday.DBHelperSundayTimetable
 import com.example.week.Timetable.Sunday.DatalistSundayTimetable
 import com.example.week.Timetable.Saturday.DBHelperSaturdayTimetable
@@ -46,6 +47,8 @@ class TimeTable : AppCompatActivity() {
     lateinit var recyclerViewTimeTableMonday: RecyclerView
     private lateinit var newArrTrainings: ArrayList<DatalisMondayTimetable>
     private lateinit var adapter: MyAdapterMondaytimetable
+
+    lateinit var DBHelperMonday: DBHelperMon
 
     lateinit var editTextInDialogNewWorkTuesday: EditText
     lateinit var DBHelperTuesdayTimeTable: DBHelperTuesdayTimetable
@@ -97,6 +100,7 @@ class TimeTable : AppCompatActivity() {
         DBHelperFridayTimeTable = DBHelperFridayTimetable(this)
         DBHelperSaturdayTimeTable = DBHelperSaturdayTimetable(this)
         DBHelperSundayTimeTable = DBHelperSundayTimetable(this)
+        DBHelperMonday = DBHelperMon(this)
 
         recyclerViewTimeTableMonday = findViewById(R.id.RecyclerMondayTimeTable)
         recyclerViewTimeTableMonday.layoutManager = LinearLayoutManager(this)
@@ -316,6 +320,7 @@ class TimeTable : AppCompatActivity() {
     fun methodSaveWorkMonday(view: View){
         editTextInDialogNewWorkMonday = dialog.findViewById(R.id.editTextInDialogNewWorkMonday)
         DBHelperMondayTimeTable.saveuserdata(editTextInDialogNewWorkMonday.text.toString())
+        DBHelperMonday.saveuserdata(editTextInDialogNewWorkMonday.text.toString())
         dialog.cancel()
         dispayuser()
     }
